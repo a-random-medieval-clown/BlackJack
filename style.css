@@ -1,19 +1,12 @@
 /* ===== Global body styling ===== */
 body {
   margin: 0;
-  /* Remove default margin */
   height: 100vh;
-  /* Full viewport height */
   background: radial-gradient(circle, #2d9b45 0%, #125c24 100%);
-  /* Green radial gradient */
   background-blend-mode: multiply;
-  /* Blend background colors */
   display: flex;
-  /* Enable flexbox */
   justify-content: center;
-  /* Center horizontally */
   position: relative;
-  /* Position reference for children */
 }
 
 /* ===== Outer container ===== */
@@ -22,9 +15,7 @@ body {
   width: 99vw;
   display: flex;
   flex-direction: column;
-  /* Stack title and game area vertically */
   align-items: center;
-  /* Center horizontally */
 }
 
 /* ===== Title section ===== */
@@ -35,7 +26,6 @@ body {
 #title {
   color: yellow;
   -webkit-text-stroke: 1px black;
-  /* Black outline around text */
   font-size: 50px;
   font-family: 'Ultra', serif;
   margin-top: 0;
@@ -45,7 +35,6 @@ body {
 #B,
 #K {
   color: red;
-  /* Special red letters in title */
   font-size: 70px;
   font-family: 'Ultra', serif;
 }
@@ -54,11 +43,9 @@ body {
 .row {
   display: flex;
   justify-content: space-between;
-  /* Spread containers evenly */
   align-items: center;
   width: 100%;
   flex: 1;
-  /* Take up remaining space */
   padding: 0 20px;
 }
 
@@ -72,7 +59,6 @@ body {
   justify-content: center;
   height: 90%;
   width: 33%;
-  /* One-third width each */
   position: static;
 }
 
@@ -110,7 +96,6 @@ body {
   border-radius: 10px;
   padding: 20px;
   background: rgba(0, 0, 0, 0.4);
-  /* Semi-transparent black */
   box-shadow: 0px 0px 50px black;
   border: 3px solid gold;
 }
@@ -122,7 +107,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  /* Space between buttons */
   height: 50%;
   width: 100%;
 }
@@ -156,48 +140,49 @@ button:hover {
 /* ===== Button color variations ===== */
 .start {
   background: linear-gradient(to bottom, #ffea00, #ff9100);
-  /* Yellow to orange */
   color: white;
 }
 
 .hit {
   background: linear-gradient(to bottom, #ff0033, #b80000);
-  /* Red shades */
   color: white;
 }
 
 .stand {
   background: linear-gradient(to bottom, #00ff66, #009933);
-  /* Green shades */
   color: white;
 }
 
 .newGame {
   background: linear-gradient(to bottom, #00ccff, #0066ff);
-  /* Blue shades */
   color: white;
 }
 
-/* Player image */
+/* ===== Player image ===== */
 .card {
   width: 80px;
   height: auto;
   margin: 1px;
 }
 
-.playerValueBox, .playerRecordBox, .dealerValueBox, .dealerRecordBox, .instructions{
+.playerValueBox,
+.playerRecordBox,
+.dealerValueBox,
+.dealerRecordBox,
+.instructions {
   width: 75%;
   height: 10%;
 }
 
-.wins, .value{
+.wins,
+.value {
   font-family: 'Minecraft', sans-serif;
   color: white;
   padding-left: 5px;
   font-size: 20px;
 }
 
-.instructionsText{
+.instructionsText {
   font-family: 'Minecraft', sans-serif;
   color: white;
   padding-left: 5px;
