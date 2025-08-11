@@ -154,8 +154,7 @@ function draw() { //Hit
       alert(`You Win! You hit 21!`);
       playerInstruction.textContent = `Click New Game for another round!`
       dealerInstruction.textContent = `Click New Game for another round!`
-
-    }, 100);
+    }, 200);
     disablePlayerActions();
     playerWins++;
     playerWin.textContent = `Wins: ${playerWins}`;
@@ -166,7 +165,7 @@ function draw() { //Hit
       alert(`Bust! You Lose!`);
       playerInstruction.textContent = `Click New Game for another round!`
       dealerInstruction.textContent = `Click New Game for another round!`
-    }, 100);
+    }, 200);
     disablePlayerActions();
     dealerWins++;
     dealerWin.textContent = `Wins: ${dealerWins}`;
@@ -286,7 +285,6 @@ function start() {
   playerValue.textContent = `Value: ${totalPlayerValue}`;
 
   dealerHandValue.push(dealerCardValue1, dealerCardValue2);
-  totalDealerValue = calculateHandValue(dealerHandValue);
   dealerValue.textContent = `Value: ${dealerCardValue1}`;
 
   console.log("Player Hand Value array:", playerHandValue);
@@ -298,7 +296,7 @@ function start() {
       playerInstruction.textContent = `Click New Game for another round!`
       dealerInstruction.textContent = `Click New Game for another round!`
       disablePlayerActions();
-    }, 100);
+    }, 200);
     playerWins++;
     playerWin.textContent = `Wins: ${playerWins}`;
     disablePlayerActions();
@@ -309,7 +307,7 @@ function start() {
       playerInstruction.textContent = `Click New Game for another round!`
       dealerInstruction.textContent = `Click New Game for another round!`
       disablePlayerActions();
-    }, 100);
+    }, 200);
     dealerWins++;
     dealerWin.textContent = `Wins: ${dealerWins}`;
     disablePlayerActions();
@@ -331,6 +329,9 @@ function stand() {
   if (faceDownCard) {
     faceDownCard.src = `cards/images/${drewCard2}.png`;
     faceDownCard.alt = drewCard2;
+
+    totalDealerValue = calculateHandValue(dealerHandValue);
+    dealerValue.textContent = `Value: ${totalDealerValue}`;
   }
 
   while (totalDealerValue < 17) {
@@ -366,7 +367,7 @@ function stand() {
       playerWins++;
       playerWin.textContent = `Wins: ${playerWins}`;
       disablePlayerActions()
-    }, 100);
+    }, 200);
     return;
   }
   else if (totalDealerValue === totalPlayerValue) {
@@ -375,7 +376,7 @@ function stand() {
       playerInstruction.textContent = `Click New Game for another round!`
       dealerInstruction.textContent = `Click New Game for another round!`
       disablePlayerActions()
-    }, 100);
+    }, 200);
     return;
   }
   else if (totalDealerValue > totalPlayerValue) {
@@ -386,7 +387,7 @@ function stand() {
       dealerWins++;
       dealerWin.textContent = `Wins: ${dealerWins}`;
       disablePlayerActions()
-    }, 100);
+    }, 200);
     return;
   }
   else {
@@ -397,7 +398,7 @@ function stand() {
       playerWins++;
       playerWin.textContent = `Wins: ${playerWins}`;
       disablePlayerActions()
-    }, 100);
+    }, 200);
     return;
   }
 }
