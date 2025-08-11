@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLACKJACK 21 | Klein</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/minecraft-3" rel="stylesheet">
+</head>
+<body>
+
+<!-- Main container holding the entire blackjack game -->
+<div class="parent">
+
+  <!-- Title Section -->
+  <div class="child-title">
+    <h1 id="title">
+      <span id="B">B</span>LACKJAC<span id="K">K</span>
+    </h1>
+  </div>
+
+  <!-- Game Row: Player area, Controls, Dealer area -->
+  <div class="row">
+
+    <!-- Player's card area -->
+    <div class="leftContainer">
+      <div class="playerRecordBox">
+        <p class="wins" id="playerWin">Wins: 0</p>
+      </div>
+      <div id="playerBoxText" class="playerBox">Click Deal / Start to Play!</div>
+      <div class="playerValueBox">
+        <p class="value" id="playerValue">Value: 0</p>
+      </div>
+      <div class="instructions">
+        <p class="instructionsText" id="instruction1"></p>
+      </div>
+    </div>
+
+    <!-- Game controls area -->
+    <div class="middleContainer">
+      <div class="options">
+
+        <!-- Top row of control buttons -->
+        <div class="firstRow">
+          <button id="start" class="start" onclick="start()">Deal / Start</button>
+          <button class="newGame" onclick="resetGameForNewRound()">New Game</button>
+        </div>
+
+        <!-- Bottom row of control buttons -->
+        <div class="secondRow">
+          <button id="hit" class="hit" onclick="draw()">Hit</button>
+          <button id="stand" class="stand" onclick="stand()">Stand</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Dealer's card area -->
+    <div class="rightContainer">
+      <div class="dealerRecordBox">
+        <p class="wins" id="dealerWin">Wins: 0</p>
+      </div>
+      <div class="dealerBox" id="dealerBoxText">Click Deal / Start to Play!</div>
+      <div class="dealerValueBox">
+        <p class="value" id="dealerValue">Value: 0</p>
+      </div>
+          <div class="instructions">
+            <p class="instructionsText" id="instruction2"></p>
+          </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+
+</html>
